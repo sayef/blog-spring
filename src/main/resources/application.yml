@@ -24,10 +24,6 @@ spring:
       naming:
         physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
 
-  # Note: do not save password in git tracked files
-  datasource:
-    url: 'jdbc:postgresql://localhost/blog'
-
   session:
     # https://github.com/spring-projects/spring-session/blob/master/docs/src/docs/asciidoc/guides/boot-redis.adoc
     store-type: redis
@@ -84,11 +80,11 @@ assets:
     port: 4200
 
 blog:
-  host: https://bianjp.com
-  title: "bianjp's Blog"
+  host: http://sayef.tech
+  title: "Sayef's Tech Blog"
   disqus:
     enabled: true
-    shortname: bianjp-blog
+    shortname: sayef-tech
 
 uploads:
   storage-dir: uploads
