@@ -2,7 +2,7 @@
 <#-- @ftlvariable name="pageLink" type="java.lang.String" -->
 <#import "components/post.ftl" as components>
 <#import "../helper/pagination.ftl" as pagination>
-<div class="banner" style="background-image: url(${assetPath('banner.jpg')});">
+<div class="banner page-width" style="background-image: url(${assetPath('banner.png')});">
   <div class="banner-text">
     <h1></h1>
     <h1>I AM SAYEF</h1>
