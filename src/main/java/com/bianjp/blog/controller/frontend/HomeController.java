@@ -9,12 +9,14 @@ import com.bianjp.blog.service.PostService;
 import com.bianjp.blog.service.TagService;
 import org.joda.time.LocalDate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.servlet.view.RedirectView;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -68,4 +70,12 @@ public class HomeController {
   public String about() {
     return "frontend/about";
   }
+
+  @Value( "${cv.url}" )
+  private String cvUrl;
+
+  @GetMapping("/cv")
+  public RedirectView cv() {
+
+    return new RedirectView(cvUrl); }
 }

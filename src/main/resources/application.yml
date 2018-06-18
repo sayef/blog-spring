@@ -88,3 +88,6 @@ blog:
 
 uploads:
   storage-dir: uploads
+
+cv:
+  url: "https://www.visualcv.com/sayef"
