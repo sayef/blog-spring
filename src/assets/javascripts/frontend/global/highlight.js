@@ -28,3 +28,8 @@ hljs.configure({
 });
 
 hljs.initHighlightingOnLoad();
+
+$(function() {
+  // override highlight.js default code background color
+  $('.hljs').css('background-color', '#456');
+});
