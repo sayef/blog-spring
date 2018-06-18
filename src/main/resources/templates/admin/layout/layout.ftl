@@ -31,6 +31,7 @@
   <a class="item ${(request.requestUri == "/admin/posts")?then("active", "")}" href="/admin/posts">Posts</a>
   <a class="item ${(request.requestUri == "/admin/posts/drafts")?then("active", "")}" href="/admin/posts/drafts">Drafts</a>
   <a class="item ${(request.requestUri == "/admin/posts/new")?then("active", "")}" href="/admin/posts/new">New Post</a>
+  <a class="item ${(request.requestUri == "/admin/files")?then("active", "")}" href="/admin/files">Files</a>
 </aside>
 
 <main class="page-main ${containerClass}">
