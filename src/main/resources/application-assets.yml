@@ -42,6 +42,11 @@ assets:
       - jsSocials/1.5.0/jssocials.min.css
       - jsSocials/1.5.0/jssocials-theme-flat.min.css
       - jsSocials/1.5.0/jssocials.min.js
+    showdown:
+      - showdown/1.8.6/showdown.js
+      - showdown/1.8.6/showdown.js.map
+      - showdown/1.8.6/showdown.min.js
+      - showdown/1.8.6/showdown.min.js.map
 
   npm-path:
     jquery:
@@ -80,3 +85,5 @@ assets:
       - jssocials/dist/jssocials.css
       - jssocials/dist/jssocials-theme-flat.css
       - jssocials/dist/jssocials.min.js
+    showdown:
+      - showdown/dist/showdown.min.js

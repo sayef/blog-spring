@@ -53,6 +53,7 @@
 <@assetHelper.javascripts 'semantic-ui'/>
 <@assetHelper.javascripts 'highlight-js'/>
 <@assetHelper.javascripts 'jssocials'/>
+<@assetHelper.javascripts 'showdown'/>
 <script src="${assetPath('application.js')}"></script>
 </body>
 </html>
