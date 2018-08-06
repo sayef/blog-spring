@@ -28,7 +28,7 @@ function uploadMultipleFiles(files) {
 }
 
 
-document.querySelector('#multipleUploadForm').addEventListener('submit', function (event) {
+function upload(event) {
   var files = document.querySelector('#multipleFileUploadInput').files;
   if (files.length === 0) {
     document.querySelector('#multipleFileUploadError').innerHTML = "Please select at least one file";
@@ -36,5 +36,5 @@ document.querySelector('#multipleUploadForm').addEventListener('submit', functio
   }
   uploadMultipleFiles(files);
   event.preventDefault();
-}, true);
+}
 
