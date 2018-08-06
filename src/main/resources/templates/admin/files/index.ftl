@@ -3,7 +3,7 @@
 <div class="upload-container">
   <div class="upload-content">
     <div class="multiple-upload">
-      <form id="multipleUploadForm" name="multipleUploadForm">
+      <form id="multipleUploadForm" name="multipleUploadForm" onsubmit="upload()" method="POST" enctype="multipart/form-data">
         <input id="multipleFileUploadInput" type="file" name="files" class="file-input" multiple required />
         <button type="submit" class="primary submit-btn">Submit</button>
       </form>
