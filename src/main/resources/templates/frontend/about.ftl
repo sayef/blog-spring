@@ -1,7 +1,7 @@
 <#macro about>
 <div class="sidebar-wrapper">
   <div class="profile-container">
-    <img class="avatar" src="${assetPath('profile.jpeg')}" alt="profile picture">
+    <img class="avatar" src="http://sayef.tech:8791/open/banner/profile.jpeg" alt="profile picture">
   </div>
   <div class="contact-container container-block">
     <ul class="list-unstyled contact-list list-inline">
