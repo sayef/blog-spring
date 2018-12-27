@@ -15,13 +15,15 @@
 </#macro>
 
 <#macro postListItem post>
-  <section class="ui very padded segment post">
+<div class="item">
+  <section style="height: 100%" class="ui very padded segment post">
     <h2 class="ui header"><a href="/posts/${post.prettyUrl}">${post.title}</a></h2>
     <@postMeta post/>
     <div class="ui divider"></div>
-    <div class="post-content">${post.excerpt?no_esc}</div>
-    <a class="read-more" href="/posts/${post.prettyUrl}">Read more >></a>
+    <#--<div class="post-content">${post.excerpt?no_esc}</div>
+    <a class="read-more" href="/posts/${post.prettyUrl}">Read more >></a>-->
   </section>
+</div>
 </#macro>
 
 <#macro postList posts>

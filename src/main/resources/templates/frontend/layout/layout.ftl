@@ -1,7 +1,9 @@
-<#macro layout pageTitle bodyClass="" containerClass="" showSidebar=false>
+<#import  "../about.ftl" as about>
+<#macro layout pageTitle bodyClass="" containerClass="" showSidebar=false showBanner=false>
 <!doctype html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119549991-1"></script>
   <script>
@@ -20,20 +22,30 @@
   <@assetHelper.stylesheets 'highlight-js'/>
   <@assetHelper.stylesheets 'jssocials'/>
   <link rel="stylesheet" href="${assetPath('application.css')}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body class="${bodyClass}">
 <header class="ui top fixed borderless menu">
   <div class="page-width container">
     <a class="item" href="/"><img src="${assetPath('logo.png')}" alt="LOGO"></a>
     <a class="item ${(request.requestUri == "/")?then("active", "")}" href="/">Home</a>
-    <a class="item ${(request.requestUri == "/about")?then("active", "")}" href="/about">About</a>
     <a class="item ${(request.requestUri == "/cv")?then("active", "")}" href="/cv">CV</a>
   </div>
 </header>
 
 <main class="page-width page-main ${containerClass} ${showSidebar?then('with-sidebar', '')}">
-  <#nested>
 
+  <#if showBanner>
+    <aside class="page-sidebar ui padded segment" style="margin: 0 1rem 0 1rem; width: 360px;">
+      <section>
+        <h2 class="ui header">About</h2>
+        <div class="ui divider"></div>
+          <@about.about></@about.about>
+      </section>
+    </aside>
+  </#if>
+    <#nested>
   <#if showSidebar>
     <aside class="page-sidebar ui padded segment">
       <section>
