@@ -1,4 +1,4 @@
-<#macro layout pageTitle="" bodyClass="" containerClass="">
+<#macro layout pageTitle="" bodyClass="" containerClass="" containerStyle="">
 <!doctype html>
 <html lang="en">
 <head>
@@ -34,7 +34,7 @@
   <a class="item ${(request.requestUri == "/admin/files")?then("active", "")}" href="/admin/files">Files</a>
 </aside>
 
-<main class="page-main ${containerClass}">
+<main class="page-main ${containerClass}" style="${containerStyle}">
   <#nested/>
 </main>
 

@@ -37,7 +37,7 @@ hljs.initHighlightingOnLoad();
 
 $(function() {
   // override highlight.js default code background color
-  $('.hljs').css('background-color', '#456');
+  //$('.hljs').css('background-color', '#456');
 
   var converter = new showdown.Converter({extensions: ['table']});
   $( "textarea" ).each(function() {
